@@ -116,8 +116,6 @@ select {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 100%;
-  width: 100%;
   background: radial-gradient(#1b5bb4 0%, #010724 100%);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,13 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  const height = window.innerHeight;
-  const width = window.innerWidth;
-
+  
   canvas();
+  window.addEventListener("resize", canvas, {passive: true});
+  
   function canvas() {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
     // レンダー
     const renderer = new THREE.WebGLRenderer({
       canvas: document.getElementById("canvas"),
@@ -13,6 +15,7 @@ function init() {
     });
     // サイズ
     renderer.setSize(width, height);
+
     // シーン作成
     const scene = new THREE.Scene();
     // カメラ作成
